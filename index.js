@@ -8,3 +8,6 @@ const followMouseFlashlight = ({ clientX, clientY }) => {
 };
 
 container.addEventListener('mousemove', followMouseFlashlight);
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}

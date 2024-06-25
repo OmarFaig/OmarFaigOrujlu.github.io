@@ -37,6 +37,13 @@ body, html {
 .job-entry {
     display: flex;
     margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.job-entry:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Highlight on hover */
 }
 
 .job-entry .left {
@@ -60,12 +67,13 @@ body, html {
 .tag {
     display: inline-block;
     background-color: #333333; /* Dark gray */
-    color: #2ecc71; /* Cyan-green color */
+    color: #00FF00; /* Cyan green */
     font-size: 12px;
     padding: 5px 10px;
     margin-right: 5px;
     border-radius: 3px;
 }
+
 #container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Equal width for both columns */
@@ -81,11 +89,11 @@ body, html {
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     height: 100vh; /* Full height to match container */
     box-sizing: border-box;
     z-index: 2; /* Ensure it is above the flashlight */
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
 
 .content {
@@ -98,9 +106,8 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    
-    flex-wrap:nowrap;
-    width: 30rem;
+    flex-wrap: nowrap;
+    width: 42rem;
 }
 
 .content > div {
@@ -141,4 +148,46 @@ p {
     font-size: 16px;
     color: #999999; /* Darker gray */
     box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.navigation-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    background-color: #333333; /* Dark gray */
+    color: #00FF00; /* Cyan green */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: #444444; /* Slightly lighter gray */
+}
+
+.social-media-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social-media-buttons a {
+    color: #00FF00; /* Cyan green */
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #333333; /* Dark gray */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.social-media-buttons a:hover {
+    background-color: #444444; /* Slightly lighter gray */
 }
