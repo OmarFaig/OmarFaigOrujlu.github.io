@@ -1,1 +1,0 @@
-# OmarFaigOrujlu.github.io
