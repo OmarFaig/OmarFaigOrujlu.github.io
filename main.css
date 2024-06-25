@@ -1,7 +1,6 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: "Playwrite NZ", cursive;
     font-optical-sizing: auto;
     font-weight: 20;
@@ -31,11 +30,47 @@ body, html {
     filter: blur(100px); /* Adjust the blur to make the light softer */
 }
 
+.about-me, .work-experience, .education {
+    padding: 20px;
+}
+
+.job-entry {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.job-entry .left {
+    flex: 0 0 30%; /* Adjust as needed */
+}
+
+.job-entry .right {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.timeframe {
+    font-size: 18px;
+    color: #b6b6b6; /* Light gray */
+}
+
+.tags {
+    margin-top: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #333333; /* Dark gray */
+    color: #2ecc71; /* Cyan-green color */
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
 #container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Equal width for both columns */
-    height: 100vh; /* Full viewport height */
     position: relative; /* Ensure it respects the flashlight's position */
+    overflow: auto;
 }
 
 .personal-header {
@@ -50,15 +85,22 @@ body, html {
     height: 100vh; /* Full height to match container */
     box-sizing: border-box;
     z-index: 2; /* Ensure it is above the flashlight */
+    overflow-y:hidden;
 }
 
 .content {
     background-color: #05081c;
-    overflow-y: auto; /* Scrollable if content exceeds height */
     padding-top: 96px;
+    padding-left: 10px;
     height: 100vh; /* Full height to match container */
     box-sizing: border-box;
     z-index: 2; /* Ensure it is above the flashlight */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+    flex-wrap:nowrap;
+    width: 30rem;
 }
 
 .content > div {
@@ -96,5 +138,7 @@ h3 {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
+    color: #999999; /* Darker gray */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
 }
