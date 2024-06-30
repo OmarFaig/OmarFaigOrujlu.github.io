@@ -12,7 +12,7 @@ body, html {
 }
 
 .playwrite-nz- {
-    font-family: "Playwrite NZ", cursive;
+    font-family: "Finlandica", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -115,12 +115,11 @@ body, html {
 }
 
 h1, h2, h3, p {
-    font-family: rondo-mn, sans-serif;
     font-style: normal;
     font-weight: 400;
     margin: 0;
     padding: 10px 0;
-    font-family: "Playwrite NZ", cursive;
+    font-family: "Finlandica", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
