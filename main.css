@@ -35,30 +35,35 @@ body, html {
 }
 
 .job-entry {
-    display: flex;
-    margin-bottom: 20px;
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside the card */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 30px;
 }
 
+.job-entry a {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    gap: 20px;
+}
 
 .job-entry .left {
-    flex: 0 0 30%; /* Adjust as needed */
+    min-width: 120px; /* Ensure minimum width for timeframe */
 }
 
 .job-entry .right {
     flex: 1;
-    padding-left: 20px;
 }
-.job-entry a {
-    display: flex;
-    flex-direction: row;
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit the color from parent elements */
-    padding: 20px; /* Ensure padding is consistent */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
-    border-radius: 10px; /* Ensure the border radius for the link */
+
+.job-entry .timeframe {
+    margin: 0;
+    padding-top: 5px; /* Align with h2 */
+}
+
+.job-entry h2 {
+    margin: 0 0 10px 0;
+}
+
+.job-entry h3 {
+    margin: 0 0 15px 0;
 }
 
 .job-entry a:hover {
@@ -79,10 +84,6 @@ body, html {
     color: #00fdfd; /* Inherit color from h2 */
     transition: color 0.3s ease; /* Smooth transition for color change */
 }
-.timeframe {
-    font-size: 18px;
-    color: #b6b6b6; /* Light gray */
-}
 
 .tags {
     margin-top: 10px;
@@ -102,38 +103,23 @@ body, html {
 
 #container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Equal width for both columns */
-    position: relative; /* Ensure it respects the flashlight's position */
-    overflow: auto;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling */
 }
 
 .personal-header {
-    background-color: #05081c;
-    padding-top: 96px;
-    padding-left: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    height: 100vh; /* Full height to match container */
-    box-sizing: border-box;
-    z-index: 2; /* Ensure it is above the flashlight */
-    overflow-y: hidden;
+    padding: 40px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .content {
-    background-color: #05081c;
-    padding-top: 96px;
-    padding-left: 10px;
-    height: 100vh; /* Full height to match container */
-    box-sizing: border-box;
-    z-index: 2; /* Ensure it is above the flashlight */
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    width: 42rem;
+    padding: 40px;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .content > div {
@@ -215,4 +201,74 @@ strong {
 
 .social-icons a:hover {
     color: #ffffff; /* White color on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    #container {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .personal-header {
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+
+    .content {
+        height: auto;
+        padding: 20px;
+    }
+
+    .job-entry a {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body, html {
+        overflow-y: auto;
+    }
+
+    .personal-header, .content {
+        padding: 15px;
+    }
+
+    .job-entry {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .personal-header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .tag {
+        font-size: 11px;
+        margin: 3px;
+    }
+}
+
+/* Base responsive settings */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
