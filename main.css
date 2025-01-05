@@ -272,3 +272,29 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    padding-right: 10px;
+  }
+  
+  .footer-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
